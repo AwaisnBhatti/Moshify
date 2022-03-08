@@ -134,7 +134,6 @@ a {
 /* Lists */
 
 .list {
-  color: var(--color-headings);
   list-style-type: none;
   padding-left: 0;
 }
@@ -147,6 +146,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -626,14 +626,14 @@ a {
   text-align: center;
 }
 
-.block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
-}
-
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .container {
@@ -794,3 +794,30 @@ a {
     order: 2;
   }
 }
+
+/* Showcase Block */
+
+.block-showcase__image > img {
+  width: 100%;
+}
+
+.block-showcase .media {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    max-width: 700px;
+    width: auto;
+  }
+}
+
+/* Testimonial Block */
