@@ -708,10 +708,6 @@ a {
 
 /* Hero */
 
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
-}
-
 .hero__tagline {
   margin: 2rem 0rem 5rem;
   font-size: 2rem;
@@ -746,7 +742,7 @@ a {
 .domain__list {
   display: grid;
   grid-template-rows: repeat(2, 6rem);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
@@ -896,4 +892,10 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Callout Signup */
+
+.callout-signup {
+  transform: translateY(5rem);
 }
