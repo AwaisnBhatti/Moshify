@@ -241,6 +241,7 @@ a {
 }
 
 .btn--outline {
+  background: #fff;
   border: 2px solid var(--color-headings);
   color: var(--color-headings);
 }
