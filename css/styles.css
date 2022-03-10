@@ -1,3 +1,5 @@
+@import url(./normalize.css);
+
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -15,8 +17,17 @@
 
 /* Typography */
 
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
+}
+
+img {
+  width: 100%;
 }
 
 body {
@@ -497,12 +508,12 @@ a {
 /* Testimonial */
 
 .testimonial {
-  margin: 4rem;
   padding: 4rem;
 }
 
-.testimonial__image > img {
-  width: 100%;
+.testimonial .quote {
+  font-size: 110%;
+  margin: 2rem 0;
 }
 
 .testimonial__image {
@@ -654,7 +665,8 @@ a {
 }
 
 .nav__brand {
-  transform: translateY(3px);
+  transform: translateY(5px);
+  width: 150px;
 }
 
 .nav__list {
@@ -795,10 +807,6 @@ a {
 }
 
 /* Showcase Block */
-
-.block-showcase__image > img {
-  width: 100%;
-}
 
 .block-showcase .media {
   margin: 1rem 0;

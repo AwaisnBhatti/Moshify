@@ -17,14 +17,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
       <nav class="collapsible nav">
-        <img src="images/logo.svg" alt="" />
+        <img
+          class="nav__brand"
+          aria-label="Moshify"
+          src="images/logo.svg"
+          alt=""
+        />
         <svg class="icon icon--white nav__toggler">
           <use xlink:href="images/sprite.svg#menu"></use>
         </svg>
@@ -70,6 +74,7 @@
       </header>
       <div class="input-group">
         <input
+          aria-label="Domain"
           class="input"
           type="text"
           placeholder="Enter domain name here..."
@@ -355,10 +360,14 @@
         <div class="card testimonial">
           <div class="grid grid--1x2">
             <div class="testimonial__image">
-              <img
-                src="images/testimonial.jpg"
-                alt="A happy smilling customer"
-              />
+              <picture>
+                <source type="image/webp" srcset="images/testimonial.webp" />
+                <source type="image/jpg" srcset="images/testimonial.jpg" />
+                <img
+                  src="images/testimonial.jpg"
+                  alt="A happy smilling customer"
+                />
+              </picture>
               <span class="icon-container icon-container--accent">
                 <svg class="icon icon--white icon--small">
                   <use xlink:href="images/sprite.svg#quotes"></use>
@@ -469,7 +478,12 @@
           </ul>
         </div>
         <div class="footer__brand">
-          <img class="footer__logo" src="images/logo.svg" alt="" />
+          <img
+            aria-label="Moshify"
+            class="footer__logo"
+            src="images/logo.svg"
+            alt=""
+          />
           <p class="footer__copy">Copyright &copy; 2020 mosh</p>
         </div>
       </div>
